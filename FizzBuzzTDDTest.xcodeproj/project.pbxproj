@@ -10,6 +10,7 @@
 		943B2EDE2AE538D4003BD8D5 /* FizzBuzzTDDTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943B2ED42AE538D3003BD8D5 /* FizzBuzzTDDTest.framework */; };
 		943B2EE32AE538D4003BD8D5 /* FizzBuzzTDDTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943B2EE22AE538D4003BD8D5 /* FizzBuzzTDDTestTests.swift */; };
 		943B2EE52AE538D4003BD8D5 /* FizzBuzzTDDTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 943B2ED72AE538D3003BD8D5 /* FizzBuzzTDDTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		943B2EF12AE55A64003BD8D5 /* FizzBuzzGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943B2EF02AE55A64003BD8D5 /* FizzBuzzGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		943B2EDD2AE538D4003BD8D5 /* FizzBuzzTDDTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FizzBuzzTDDTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		943B2EE22AE538D4003BD8D5 /* FizzBuzzTDDTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzTDDTestTests.swift; sourceTree = "<group>"; };
 		943B2EE42AE538D4003BD8D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		943B2EF02AE55A64003BD8D5 /* FizzBuzzGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				943B2ED72AE538D3003BD8D5 /* FizzBuzzTDDTest.h */,
+				943B2EF02AE55A64003BD8D5 /* FizzBuzzGenerator.swift */,
 				943B2ED82AE538D3003BD8D5 /* Info.plist */,
 			);
 			path = FizzBuzzTDDTest;
@@ -147,6 +150,7 @@
 				TargetAttributes = {
 					943B2ED32AE538D3003BD8D5 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					943B2EDC2AE538D4003BD8D5 = {
 						CreatedOnToolsVersion = 12.4;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				943B2EF12AE55A64003BD8D5 /* FizzBuzzGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +345,7 @@
 		943B2EE92AE538D4003BD8D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -357,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vimal.FizzBuzzTDDTest;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -364,6 +371,7 @@
 		943B2EEA2AE538D4003BD8D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -388,6 +396,7 @@
 		943B2EEC2AE538D4003BD8D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9E26H623J7;
@@ -406,6 +415,7 @@
 		943B2EED2AE538D4003BD8D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9E26H623J7;

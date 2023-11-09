@@ -17,19 +17,10 @@ import XCTest
  
  we will use TDD (Test Driven Development) to write the code
  */
+// for better test coverage, you should add more inputs per test case
 
-struct FizzBuzzGenerator {
-    static func generate(from input: Int) -> String {
-        guard input != 0 else { return "" }
-        
-        switch (input.isMultiple(of: 3), input.isMultiple(of: 5)) {
-        case (true, true): return "FizzBuzz"
-        case (true, _): return "Fizz"
-        case (_, true): return "Buzz"
-        default: return String(input)
-        }
-    }
-}
+
+// Thats it!!
 
 class FizzBuzzTDDTestTests: XCTestCase {
     func test_returnTheNumbers() {
@@ -47,14 +38,31 @@ class FizzBuzzTDDTestTests: XCTestCase {
     
     func test_returnFizzForNumbersDivisibleByThree() {
         expect(input: 3, toGive: "Fizz")
+        expect(input: 6, toGive: "Fizz")
+        expect(input: 9, toGive: "Fizz")
+        expect(input: 12, toGive: "Fizz")
+        expect(input: 33, toGive: "Fizz")
+        expect(input: 66, toGive: "Fizz")
+        expect(input: 99, toGive: "Fizz")
     }
     
     func test_returnBuzzForNumbersDivisibleByFive() {
         expect(input: 5, toGive: "Buzz")
+        expect(input: 10, toGive: "Buzz")
+        expect(input: 20, toGive: "Buzz")
+        expect(input: 25, toGive: "Buzz")
+        expect(input: 35, toGive: "Buzz")
+        expect(input: 40, toGive: "Buzz")
+        expect(input: 100, toGive: "Buzz")
     }
     
     func test_returnFizzBuzzForNumbersDivisibleByBothThreeAndFive() {
         expect(input: 15, toGive: "FizzBuzz")
+        expect(input: 45, toGive: "FizzBuzz")
+        expect(input: 30, toGive: "FizzBuzz")
+        expect(input: 60, toGive: "FizzBuzz")
+        expect(input: 75, toGive: "FizzBuzz")
+        expect(input: 90, toGive: "FizzBuzz")
     }
     
     // MARK: - Helpers
